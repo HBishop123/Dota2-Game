@@ -12,11 +12,11 @@ class User {
 const getUserData = (e) => {
   e.preventDefault();
   const user = {
-    nameOne: document.getElementById("nameOne").value,
-    nameTwo: document.getElementById("nameTwo").value,
-    nameThree: document.getElementById("nameThree").value,
-    nameFour: document.getElementById("nameFour").value,
-    nameFive: document.getElementById("nameFive").value,
+    nameOne: document.getElementById("name-one").value,
+    nameTwo: document.getElementById("name-two").value,
+    nameThree: document.getElementById("name-three").value,
+    nameFour: document.getElementById("name-four").value,
+    nameFive: document.getElementById("name-five").value,
   };
 
   const { nameOne, nameTwo, nameThree, nameFour, nameFive } = user;
