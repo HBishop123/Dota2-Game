@@ -186,4 +186,9 @@ function selectHero() {
     "Witch Doctor",
     "Zeus",
   ];
+  const heroSelector = Math.floor(Math.random() * heroNames.length)
+  const hero = heroNames[heroSelector]
+  heroNames.splice(heroSelector, 1)
+  return hero
 }
+
