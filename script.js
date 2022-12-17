@@ -56,8 +56,8 @@ function createPlayerDisplay() {
   for (i = 0; i < playerArray.length; i++) {
     const card = document.createElement("div");
     card.style.backgroundColor = "blue";
-    card.style.height = "20%";
-    card.style.width = "20%";
+    card.style.height = "250px";
+    card.style.width = "250px";
     playerDisplay.appendChild(card);
   }
 }
@@ -204,3 +204,5 @@ function selectHero() {
 }
 const hero = selectHero();
 console.log(hero);
+
+// create new div for card container and make responsive.
