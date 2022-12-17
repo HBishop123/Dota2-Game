@@ -25,13 +25,14 @@ const getUserData = (e) => {
   userArr.push(fifthPlayer);
 
   for (i = 0; i < userArr.length; i++) {
-    if (userArr[i] === "") {}
-     else if (userArr[i] !== "") {
+    if (userArr[i] === "") {
+    } else if (userArr[i] !== "") {
       const playerName = new User(userArr[i]);
       playerArray.push(playerName);
     }
   }
   document.forms[0].reset();
+  document.querySelector(".form-container").style.display = "none";
 };
 
 // add event listener for form button
