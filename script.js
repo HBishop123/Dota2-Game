@@ -3,8 +3,8 @@ playerArray = [];
 
 // Constructor for plsyer info
 class User {
-  constructor(nameOne, hero, role) {
-    this.nameOne = nameOne;
+  constructor(playerName, hero, role) {
+    this.playerName = playerName;
     this.hero = hero;
     this.role = role;
   }
