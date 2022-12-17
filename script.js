@@ -53,12 +53,16 @@ const getUserData = (e) => {
   }
 };
 
+function createPlayerDisplay() {
+  
+}
+
 // add event listener for form button
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("btn").addEventListener("click", getUserData);
+  document
+    .getElementById("btn")
+    .addEventListener("click", getUserData, createPlayerDisplay);
 });
-
-console.log(playerArray);
 
 function selectHero() {
   const heroNames = [
@@ -186,9 +190,10 @@ function selectHero() {
     "Witch Doctor",
     "Zeus",
   ];
-  const heroSelector = Math.floor(Math.random() * heroNames.length)
-  const hero = heroNames[heroSelector]
-  heroNames.splice(heroSelector, 1)
-  return hero
+  const heroSelector = Math.floor(Math.random() * heroNames.length);
+  const hero = heroNames[heroSelector];
+  heroNames.splice(heroSelector, 1);
+  return hero;
 }
-
+const hero = selectHero();
+console.log(hero);
