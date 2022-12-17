@@ -11,8 +11,8 @@ class User {
 }
 
 // function that is used on the 'click' event listener on the submit button.
-const getUserData = (e) => {
-  e.preventDefault();
+const getUserData = () => {
+  
 
   // pushes each value of the form to the userArr array
   const userArr = [];
@@ -54,14 +54,20 @@ const getUserData = (e) => {
 };
 
 function createPlayerDisplay() {
-  
+  // let playerDisplay = document.querySelector(".player-display");
+  console.log("haha");
 }
+
 
 // add event listener for form button
 document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("btn")
-    .addEventListener("click", getUserData, createPlayerDisplay);
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      getUserData()
+      createPlayerDisplay()
+    });
 });
 
 function selectHero() {
@@ -196,4 +202,4 @@ function selectHero() {
   return hero;
 }
 const hero = selectHero();
-console.log(hero);
+console.log(hero)
