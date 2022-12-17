@@ -32,12 +32,15 @@ h1 {
 }
 
 main {
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   height: 100%;
   width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+  gap: 30px;
 }
 
 .form-container {
