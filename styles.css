@@ -68,3 +68,14 @@ form > #btn{
   border-radius: 20px;
   border: 2px solid #a72714;
 }
+
+form > #btn:hover{
+  scale: 1.1;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+}
+
+form > #btn:active{
+  scale: 1.1;
+  background-color: rgb(102, 185, 102);
+  
+}
