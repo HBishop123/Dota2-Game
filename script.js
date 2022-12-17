@@ -12,8 +12,6 @@ class User {
 
 // function that is used on the 'click' event listener on the submit button.
 const getUserData = () => {
-  
-
   // pushes each value of the form to the userArr array
   const userArr = [];
   const firstPlayer = document.getElementById("name-one").value;
@@ -54,20 +52,23 @@ const getUserData = () => {
 };
 
 function createPlayerDisplay() {
-  let playerDisplay = document.querySelector(".player-display");
-  
+  const playerDisplay = document.querySelector("main");
+  for (i = 0; i < playerArray.length; i++) {
+    const card = document.createElement("div");
+    card.style.backgroundColor = "blue";
+    card.style.height = "20%";
+    card.style.width = "20%";
+    playerDisplay.appendChild(card);
+  }
 }
-
 
 // add event listener for form button
 document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("btn")
-    .addEventListener("click", (e) => {
-      e.preventDefault();
-      getUserData()
-      createPlayerDisplay()
-    });
+  document.getElementById("btn").addEventListener("click", (e) => {
+    e.preventDefault();
+    getUserData();
+    createPlayerDisplay();
+  });
 });
 
 function selectHero() {
@@ -202,4 +203,4 @@ function selectHero() {
   return hero;
 }
 const hero = selectHero();
-console.log(hero)
+console.log(hero);
