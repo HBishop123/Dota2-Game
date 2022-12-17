@@ -54,8 +54,8 @@ const getUserData = () => {
 };
 
 function createPlayerDisplay() {
-  // let playerDisplay = document.querySelector(".player-display");
-  console.log("haha");
+  let playerDisplay = document.querySelector(".player-display");
+  
 }
 
 
