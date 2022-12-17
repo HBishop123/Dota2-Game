@@ -1,32 +1,42 @@
+// array of objects for players
+playerArray = [];
 
 class User {
-  constructor(nameOne, nameTwo, nameThree, nameFour, nameFive) {
+  constructor(nameOne, hero, role) {
     this.nameOne = nameOne;
-    this.nameTwo = nameTwo;
-    this.nameThree = nameThree;
-    this.nameFour = nameFour;
-    this.nameFive = nameFive;
+    this.hero = hero;
+    this.role = role;
   }
 }
 
 const getUserData = (e) => {
   e.preventDefault();
-  const user = {
-    nameOne: document.getElementById("name-one").value,
-    nameTwo: document.getElementById("name-two").value,
-    nameThree: document.getElementById("name-three").value,
-    nameFour: document.getElementById("name-four").value,
-    nameFive: document.getElementById("name-five").value,
-  };
 
-  const { nameOne, nameTwo, nameThree, nameFour, nameFive } = user;
-  const result = new User(nameOne, nameTwo, nameThree, nameFour, nameFive);
+  const userArr = [];
+  const firstPlayer = document.getElementById("name-one").value;
+  userArr.push(firstPlayer);
+  const secondPlayer = document.getElementById("name-two").value;
+  userArr.push(secondPlayer);
+  const thirdPlayer = document.getElementById("name-three").value;
+  userArr.push(thirdPlayer);
+  const fourthPlayer = document.getElementById("name-four").value;
+  userArr.push(fourthPlayer);
+  const fifthPlayer = document.getElementById("name-five").value;
+  userArr.push(fifthPlayer);
+
+  for (i = 0; i < userArr.length; i++) {
+    if (userArr[i] === "") {}
+     else if (userArr[i] !== "") {
+      const playerName = new User(userArr[i]);
+      playerArray.push(playerName);
+    }
+  }
   document.forms[0].reset();
-  arr.push(result);
 };
 
+// add event listener for form button
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn").addEventListener("click", getUserData);
 });
-let arr = [];
-console.log(arr);
+
+console.log(playerArray);
