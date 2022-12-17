@@ -47,7 +47,6 @@ const getUserData = (e) => {
     fifthPlayer === ""
   ) {
     document.querySelector(".form-container").style.display = "block";
-    
   } else {
     // form disappears if there is input in the forms
     document.querySelector(".form-container").style.display = "none";
@@ -60,3 +59,50 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 console.log(playerArray);
+
+function selectHero() {
+  const heroNames = [
+    "Abaddon",
+    "Alchemist",
+    "Axe",
+    "Beastmaster",
+    "Brewmaster",
+    "Bristleback",
+    "Centaur Warrunner",
+    "Chaos Knight",
+    "Clockwerk",
+    "Dawnbreaker",
+    "Doom",
+    "Dragon Knight",
+    "Earth Spirit",
+    "Earthshaker",
+    "Elder Titan",
+    "Huskar",
+    "Io",
+    "Kunkka",
+    "Legion Commander",
+    "Lifestealer",
+    "Lycan",
+    "Magnus",
+    "Marci",
+    "Mars",
+    "Night Stalker",
+    "Omniknight",
+    "Phoenix",
+    "Primal Beast",
+    "Pudge",
+    "Sand King",
+    "Slardar",
+    "Snapfire",
+    "Spirit Breaker",
+    "Sven",
+    "Tidehunter",
+    "Timbersaw",
+    "Tiny",
+    "Treant Protector",
+    "Tusk",
+    "Underlord",
+    "Undying",
+    "Wraith King",
+  ];
+}
