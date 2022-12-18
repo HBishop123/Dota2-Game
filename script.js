@@ -55,6 +55,7 @@ function createPlayerDisplay() {
   const playerDisplay = document.querySelector("main");
   for (i = 0; i < playerArray.length; i++) {
     const card = document.createElement("div");
+    card.id = `div${i}`;
     card.style.backgroundColor = "blue";
     card.style.height = "250px";
     card.style.width = "500px";
@@ -64,6 +65,7 @@ function createPlayerDisplay() {
     playerDisplay.appendChild(card);
 
     const randomButton = document.createElement("button");
+    randomButton.id = `button${i}`;
     randomButton.innerHTML = "Randomise";
     randomButton.style.alignSelf = "center";
     randomButton.style.marginTop = "auto";
@@ -212,11 +214,18 @@ function selectHero() {
   heroNames.splice(heroSelector, 1);
   return hero;
 }
-selectHero();
 
-// create new div for card container and make responsive.
+function userInfo() {
+  const button0 = document.getElementById("button0");
+  const button1 = document.getElementById("button1");
+  const button2 = document.getElementById("button2");
+  const button3 = document.getElementById("button3");
+  const button4 = document.getElementById("button4");
 
-// hero = selectHero()
-// const heroChoice = document.createElement('p')
-//     heroChoice.innerHTML = hero
-//     card.appendChild(heroChoice)
+  button0.addEventListener("click", () => {
+    const parentDiv = button0.parentNode;
+    const heroText = document.createElement("p");
+    heroText.innerText = selectHero();
+    parentDiv.appendChild(heroText);
+  });
+}
