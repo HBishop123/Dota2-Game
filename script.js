@@ -217,10 +217,29 @@ function selectHero() {
 
 document.addEventListener("click", (e) => {
   const target = e.target;
-  if (target === document.getElementById("button0")) {
+  function appendHero() {
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
     heroText.innerText = selectHero();
     parentDiv.appendChild(heroText);
+  }
+
+  switch (target) {
+    case document.getElementById("button0"):
+      appendHero();
+      break;
+    case document.getElementById("button1"):
+      appendHero();
+      break;
+    case document.getElementById("button2"):
+      appendHero();
+      break;
+    case document.getElementById("button3"):
+      appendHero();
+      break;
+    case document.getElementById("button4"):
+      appendHero();
+      break;
+    default:
   }
 });
