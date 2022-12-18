@@ -57,8 +57,18 @@ function createPlayerDisplay() {
     const card = document.createElement("div");
     card.style.backgroundColor = "blue";
     card.style.height = "250px";
-    card.style.width = "250px";
+    card.style.width = "500px";
+    card.style.display = "flex";
+    card.style.flexDirection = "column";
+    card.style.paddingBottom = "5px";
     playerDisplay.appendChild(card);
+
+    const randomButton = document.createElement("button");
+    randomButton.innerHTML = "Randomise";
+    randomButton.style.alignSelf = "center";
+    randomButton.style.marginTop = "auto";
+
+    card.appendChild(randomButton);
   }
 }
 
@@ -202,7 +212,11 @@ function selectHero() {
   heroNames.splice(heroSelector, 1);
   return hero;
 }
-const hero = selectHero();
-console.log(hero);
+selectHero();
 
 // create new div for card container and make responsive.
+
+// hero = selectHero()
+// const heroChoice = document.createElement('p')
+//     heroChoice.innerHTML = hero
+//     card.appendChild(heroChoice)
