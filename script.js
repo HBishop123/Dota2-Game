@@ -215,17 +215,12 @@ function selectHero() {
   return hero;
 }
 
-function userInfo() {
-  const button0 = document.getElementById("button0");
-  const button1 = document.getElementById("button1");
-  const button2 = document.getElementById("button2");
-  const button3 = document.getElementById("button3");
-  const button4 = document.getElementById("button4");
-
-  button0.addEventListener("click", () => {
-    const parentDiv = button0.parentNode;
+document.addEventListener("click", (e) => {
+  const target = e.target;
+  if (target === document.getElementById("button0")) {
+    const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
     heroText.innerText = selectHero();
     parentDiv.appendChild(heroText);
-  });
-}
+  }
+});
