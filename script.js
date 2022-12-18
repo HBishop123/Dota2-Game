@@ -60,7 +60,7 @@ function createPlayerDisplay() {
     card.style.height = "250px";
     card.style.width = "500px";
     card.style.display = "flex";
-    card.style.flexDirection = "column";
+    card.style.flexDirection = "column-reverse";
     card.style.paddingBottom = "5px";
     playerDisplay.appendChild(card);
 
@@ -220,6 +220,7 @@ document.addEventListener("click", (e) => {
   function appendHero() {
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
+    heroText.style.alignSelf = 'center'
     heroText.innerText = selectHero();
     parentDiv.appendChild(heroText);
   }
