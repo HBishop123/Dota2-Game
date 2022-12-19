@@ -20,6 +20,7 @@ header {
   padding: 5px, 0px, 5px, 0px;
   justify-items: center;
   align-items: center;
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .header-text {
@@ -48,6 +49,7 @@ main {
   height: min-content;
   background-color: #d0c7c7;
   border-radius: 50px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 form {
@@ -84,6 +86,6 @@ form > #btn:active {
   background-color: rgb(102, 185, 102);
 }
 
-button{
+button {
   transition: 0.8s ease-in-out;
 }
