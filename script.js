@@ -69,6 +69,9 @@ function createPlayerDisplay() {
     randomButton.innerHTML = "Randomise";
     randomButton.style.alignSelf = "center";
     randomButton.style.marginTop = "auto";
+    randomButton.style.borderRadius = "20px";
+    randomButton.style.padding = "5px";
+    randomButton.style.border = "2px solid #a72714";
 
     card.appendChild(randomButton);
   }
@@ -220,26 +223,31 @@ document.addEventListener("click", (e) => {
   function appendHero() {
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
-    heroText.style.alignSelf = 'center'
-    heroText.innerText = selectHero();
+    heroText.style.alignSelf = "center";
+    heroText.innerText = `Your Hero is: ${selectHero()}`;
     parentDiv.appendChild(heroText);
   }
 
   switch (target) {
     case document.getElementById("button0"):
       appendHero();
+      target.style.backgroundColor = "rgb(102, 185, 102)";
       break;
     case document.getElementById("button1"):
       appendHero();
+      target.style.backgroundColor = "rgb(102, 185, 102)";
       break;
     case document.getElementById("button2"):
       appendHero();
+      target.style.backgroundColor = "rgb(102, 185, 102)";
       break;
     case document.getElementById("button3"):
       appendHero();
+      target.style.backgroundColor = "rgb(102, 185, 102)";
       break;
     case document.getElementById("button4"):
       appendHero();
+      target.style.backgroundColor = "rgb(102, 185, 102)";
       break;
     default:
   }
