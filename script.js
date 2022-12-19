@@ -231,7 +231,7 @@ document.addEventListener("click", (e) => {
   switch (target) {
     case document.getElementById("button0"):
       appendHero();
-      target.style.backgroundColor = "rgb(102, 185, 102)";
+      target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
         target.innerHTML = 'Randomise Role'
@@ -239,7 +239,7 @@ document.addEventListener("click", (e) => {
       break;
     case document.getElementById("button1"):
       appendHero();
-      target.style.backgroundColor = "rgb(102, 185, 102)";
+      target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
         target.innerHTML = 'Randomise Role'
@@ -247,7 +247,7 @@ document.addEventListener("click", (e) => {
       break;
     case document.getElementById("button2"):
       appendHero();
-      target.style.backgroundColor = "rgb(102, 185, 102)";
+      target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
         target.innerHTML = 'Randomise Role'
@@ -255,7 +255,7 @@ document.addEventListener("click", (e) => {
       break;
     case document.getElementById("button3"):
       appendHero();
-      target.style.backgroundColor = "rgb(102, 185, 102)";
+      target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
         target.innerHTML = 'Randomise Role'
@@ -263,10 +263,11 @@ document.addEventListener("click", (e) => {
       break;
     case document.getElementById("button4"):
       appendHero();
-      target.style.backgroundColor = "rgb(102, 185, 102)";
+      target.style.backgroundColor = "black";
       target.innerHTML = 'Randomise Role'
       setTimeout(() => {
         target.style.backgroundColor = "white";
+        target.innerHTML = 'Randomise Role'
       }, 2000);
       break;
     default:
