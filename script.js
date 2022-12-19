@@ -280,3 +280,4 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// find a way for card text to be shown below the name when button clicked
