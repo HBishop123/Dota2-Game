@@ -71,6 +71,10 @@ form > #nameFive > input {
   width: 160px;
 }
 
+button:nth-child(6) {
+  margin-top: 10px;
+}
+
 form > #btn {
   border-radius: 20px;
   border: 2px solid #a72714;
