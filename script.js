@@ -234,6 +234,7 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "rgb(102, 185, 102)";
       setTimeout(() => {
         target.style.backgroundColor = "white";
+        target.innerHTML = 'Randomise Role'
       }, 2000);
       break;
     case document.getElementById("button1"):
@@ -241,6 +242,7 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "rgb(102, 185, 102)";
       setTimeout(() => {
         target.style.backgroundColor = "white";
+        target.innerHTML = 'Randomise Role'
       }, 2000);
       break;
     case document.getElementById("button2"):
@@ -248,6 +250,7 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "rgb(102, 185, 102)";
       setTimeout(() => {
         target.style.backgroundColor = "white";
+        target.innerHTML = 'Randomise Role'
       }, 2000);
       break;
     case document.getElementById("button3"):
@@ -255,11 +258,13 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "rgb(102, 185, 102)";
       setTimeout(() => {
         target.style.backgroundColor = "white";
+        target.innerHTML = 'Randomise Role'
       }, 2000);
       break;
     case document.getElementById("button4"):
       appendHero();
       target.style.backgroundColor = "rgb(102, 185, 102)";
+      target.innerHTML = 'Randomise Role'
       setTimeout(() => {
         target.style.backgroundColor = "white";
       }, 2000);
