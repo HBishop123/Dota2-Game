@@ -36,15 +36,14 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   height: 100%;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 10px 10px 0px 10px;
   align-items: center;
   justify-items: center;
   gap: 30px;
 }
 
 .form-container {
-  position: absolute;
+  position: fixed;
   width: 350px;
   height: min-content;
   background-color: #d0c7c7;
@@ -83,4 +82,8 @@ form > #btn:hover {
 form > #btn:active {
   scale: 1.1;
   background-color: rgb(102, 185, 102);
+}
+
+button{
+  transition: 0.8s ease-in-out;
 }
