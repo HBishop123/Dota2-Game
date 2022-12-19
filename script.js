@@ -75,6 +75,11 @@ function createPlayerDisplay() {
     randomButton.style.border = "4px solid #a72714";
 
     card.appendChild(randomButton);
+
+    let playerName = document.createElement("p");
+    playerName.style.alignSelf = "center";
+    playerName.innerHTML = playerArray[i].playerName;
+    card.appendChild(playerName);
   }
 }
 
@@ -274,3 +279,5 @@ document.addEventListener("click", (e) => {
     default:
   }
 });
+
+// if button clicked, they all become random role at once on randomiser
