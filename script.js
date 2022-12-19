@@ -280,4 +280,3 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// if button clicked, they all become random role at once on randomiser
