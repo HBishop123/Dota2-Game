@@ -62,6 +62,7 @@ function createPlayerDisplay() {
     card.style.display = "flex";
     card.style.flexDirection = "column-reverse";
     card.style.paddingBottom = "5px";
+    card.style.boxShadow = "0px 6px 5px 0px rgba(0, 0, 0, 0.75)";
     playerDisplay.appendChild(card);
 
     const randomButton = document.createElement("button");
@@ -234,7 +235,7 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
-        target.innerHTML = 'Randomise Role'
+        target.innerHTML = "Randomise Role";
       }, 2000);
       break;
     case document.getElementById("button1"):
@@ -242,7 +243,7 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
-        target.innerHTML = 'Randomise Role'
+        target.innerHTML = "Randomise Role";
       }, 2000);
       break;
     case document.getElementById("button2"):
@@ -250,7 +251,7 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
-        target.innerHTML = 'Randomise Role'
+        target.innerHTML = "Randomise Role";
       }, 2000);
       break;
     case document.getElementById("button3"):
@@ -258,16 +259,16 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "black";
       setTimeout(() => {
         target.style.backgroundColor = "white";
-        target.innerHTML = 'Randomise Role'
+        target.innerHTML = "Randomise Role";
       }, 2000);
       break;
     case document.getElementById("button4"):
       appendHero();
       target.style.backgroundColor = "black";
-      target.innerHTML = 'Randomise Role'
+      target.innerHTML = "Randomise Role";
       setTimeout(() => {
         target.style.backgroundColor = "white";
-        target.innerHTML = 'Randomise Role'
+        target.innerHTML = "Randomise Role";
       }, 2000);
       break;
     default:
