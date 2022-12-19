@@ -66,12 +66,12 @@ function createPlayerDisplay() {
 
     const randomButton = document.createElement("button");
     randomButton.id = `button${i}`;
-    randomButton.innerHTML = "Randomise";
+    randomButton.innerHTML = "Randomise Hero";
     randomButton.style.alignSelf = "center";
     randomButton.style.marginTop = "auto";
     randomButton.style.borderRadius = "20px";
     randomButton.style.padding = "5px";
-    randomButton.style.border = "2px solid #a72714";
+    randomButton.style.border = "4px solid #a72714";
 
     card.appendChild(randomButton);
   }
@@ -232,22 +232,37 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button0"):
       appendHero();
       target.style.backgroundColor = "rgb(102, 185, 102)";
+      setTimeout(() => {
+        target.style.backgroundColor = "white";
+      }, 2000);
       break;
     case document.getElementById("button1"):
       appendHero();
       target.style.backgroundColor = "rgb(102, 185, 102)";
+      setTimeout(() => {
+        target.style.backgroundColor = "white";
+      }, 2000);
       break;
     case document.getElementById("button2"):
       appendHero();
       target.style.backgroundColor = "rgb(102, 185, 102)";
+      setTimeout(() => {
+        target.style.backgroundColor = "white";
+      }, 2000);
       break;
     case document.getElementById("button3"):
       appendHero();
       target.style.backgroundColor = "rgb(102, 185, 102)";
+      setTimeout(() => {
+        target.style.backgroundColor = "white";
+      }, 2000);
       break;
     case document.getElementById("button4"):
       appendHero();
       target.style.backgroundColor = "rgb(102, 185, 102)";
+      setTimeout(() => {
+        target.style.backgroundColor = "white";
+      }, 2000);
       break;
     default:
   }
