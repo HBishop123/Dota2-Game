@@ -1,5 +1,6 @@
 // array of objects for players
 playerArray = [];
+console.log(playerArray);
 
 // Constructor for plsyer info
 class User {
@@ -233,15 +234,19 @@ function selectHero() {
 document.addEventListener("click", (e) => {
   const target = e.target;
   function appendHero() {
+    let idCounter = 0;
+
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
+    heroText.id = `text${idCounter}`;
+    heroText.classList.add("animated");
     heroText.style.alignSelf = "center";
     heroText.style.fontSize = "30px";
     heroText.style.fontWeight = "1000";
-    heroText.classList.add("animated");
 
     heroText.innerText = `${selectHero()}`;
     parentDiv.appendChild(heroText);
+    idCounter++;
   }
 
   switch (target) {
@@ -249,6 +254,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.opacity = "0";
       target.id = "buttonRole0";
+      playerArray[0].role = document.getElementById("text0").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -295,7 +301,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
 document.addEventListener("click", (e) => {
   const target = e.target;
   function appendRole() {
@@ -305,11 +310,8 @@ document.addEventListener("click", (e) => {
     roleText.style.fontSize = "30px";
     roleText.style.fontWeight = "1000";
     roleText.classList.add("animated");
-    
-    roleText.innerText = `${selectRole()}`
-    parentDiv.appendChild(roleText)
 
+    roleText.innerText = `${selectRole()}`;
+    parentDiv.appendChild(roleText);
   }
-
-  
-})
+});
