@@ -117,3 +117,7 @@ button {
 p.animated {
   animation: fadeIn 4s ease-in-out;
 }
+
+.card {
+  animation: slideInFromLeft 1s ease-in-out;
+}
