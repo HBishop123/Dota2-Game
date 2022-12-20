@@ -251,7 +251,7 @@ function selectRole() {
 
 // click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
 document.addEventListener("click", (e) => {
-  const {target} = e;
+  const { target } = e;
   const card = target.parentNode;
 
   function appendHero() {
@@ -328,7 +328,9 @@ document.addEventListener("click", (e) => {
 
 // click event to append the role to player card
 document.addEventListener("click", (e) => {
-  const {target} = e;
+  const { target } = e;
+  const card = target.parentNode;
+
   function appendRole() {
     const parentDiv = target.parentNode;
     const roleText = document.createElement("p");
@@ -348,6 +350,17 @@ document.addEventListener("click", (e) => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Challenge";
       }, 1500);
+      if (card.id === "div0") {
+        playerArray[0].role = card.querySelector(":nth-child(4)").innerHTML;
+      } else if (card.id === "div1") {
+        playerArray[1].role = card.querySelector(":nth-child(4)").innerHTML;
+      } else if (card.id === "div2") {
+        playerArray[2].role = card.querySelector(":nth-child(4)").innerHTML;
+      } else if (card.id === "div3") {
+        playerArray[3].role = card.querySelector(":nth-child(4)").innerHTML;
+      } else if (card.id === "div4") {
+        playerArray[4].role = card.querySelector(":nth-child(4)").innerHTML;
+      }
       break;
     default:
   }
