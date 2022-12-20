@@ -95,6 +95,11 @@ button {
   transition: 0.6s ease-in-out;
 }
 
+.randomButton:hover {
+  scale: 1.05;
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
 /* animations */
 
 @keyframes slideInFromLeft {

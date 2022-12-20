@@ -56,7 +56,7 @@ function createPlayerDisplay() {
   for (i = 0; i < playerArray.length; i++) {
     const card = document.createElement("div");
     card.id = `div${i}`;
-    card.classList.add('card')
+    card.classList.add("card");
     card.style.backgroundColor = "blue";
     card.style.height = "250px";
     card.style.width = "500px";
@@ -65,11 +65,12 @@ function createPlayerDisplay() {
     card.style.paddingBottom = "5px";
     card.style.boxShadow = "0px 6px 5px 0px rgba(0, 0, 0, 0.75)";
     card.style.position = "relative";
-    card.style.gap = '10px'
+    card.style.gap = "10px";
     playerDisplay.appendChild(card);
 
     const randomButton = document.createElement("button");
     randomButton.id = `button${i}`;
+    randomButton.classList.add("randomButton");
     randomButton.innerHTML = "Randomise Hero";
     randomButton.style.alignSelf = "center";
     randomButton.style.borderRadius = "20px";
@@ -77,7 +78,7 @@ function createPlayerDisplay() {
     randomButton.style.border = "4px solid #a72714";
     randomButton.style.position = "absolute";
     randomButton.style.top = "78%";
-    randomButton.style.backgroundColor = 'azure'
+    randomButton.style.backgroundColor = "azure";
 
     card.appendChild(randomButton);
 
@@ -235,19 +236,19 @@ document.addEventListener("click", (e) => {
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
     heroText.style.alignSelf = "center";
-    heroText.style.fontSize = '30px'
-    heroText.style.fontWeight = '1000'
+    heroText.style.fontSize = "30px";
+    heroText.style.fontWeight = "1000";
     heroText.classList.add("animated");
-    
+
     heroText.innerText = `${selectHero()}`;
     parentDiv.appendChild(heroText);
   }
 
   switch (target) {
-    case document.getElementById("button0") :
+    case document.getElementById("button0"):
       appendHero();
       target.style.opacity = "0";
-      target.id = 'buttonRole0'
+      target.id = "buttonRole0";
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -256,7 +257,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button1"):
       appendHero();
       target.style.opacity = "0";
-      target.id = 'buttonRole1'
+      target.id = "buttonRole1";
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -265,7 +266,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button2"):
       appendHero();
       target.style.opacity = "0";
-      target.id = 'buttonRole2'
+      target.id = "buttonRole2";
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -274,7 +275,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button3"):
       appendHero();
       target.style.opacity = "0";
-      target.id = 'buttonRole3'
+      target.id = "buttonRole3";
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -283,7 +284,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button4"):
       appendHero();
       target.style.opacity = "0";
-      target.id = 'buttonRole4'
+      target.id = "buttonRole4";
       target.innerHTML = "Randomise Role";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -293,5 +294,3 @@ document.addEventListener("click", (e) => {
     default:
   }
 });
-
-
