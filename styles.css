@@ -83,15 +83,15 @@ form > #btn {
 form > #btn:hover {
   scale: 1.1;
   box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: rgb(102, 185, 102);
 }
 
 form > #btn:active {
   scale: 1.1;
-  background-color: rgb(102, 185, 102);
 }
 
 button {
-  transition: 0.4s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
 /* animations */
