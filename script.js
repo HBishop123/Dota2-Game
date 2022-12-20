@@ -294,3 +294,22 @@ document.addEventListener("click", (e) => {
     default:
   }
 });
+
+
+document.addEventListener("click", (e) => {
+  const target = e.target;
+  function appendRole() {
+    const parentDiv = target.parentNode;
+    const roleText = document.createElement("p");
+    roleText.style.alignSelf = "center";
+    roleText.style.fontSize = "30px";
+    roleText.style.fontWeight = "1000";
+    roleText.classList.add("animated");
+    
+    roleText.innerText = `${selectRole()}`
+    parentDiv.appendChild(roleText)
+
+  }
+
+  
+})
