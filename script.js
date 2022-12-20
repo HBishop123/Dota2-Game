@@ -243,44 +243,44 @@ document.addEventListener("click", (e) => {
   switch (target) {
     case document.getElementById("button0"):
       appendHero();
-      target.style.backgroundColor = "black";
+      target.style.opacity = "0";
       setTimeout(() => {
-        target.style.backgroundColor = "azure";
+        target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
-      }, 2000);
+      }, 1500);
       break;
     case document.getElementById("button1"):
       appendHero();
-      target.style.backgroundColor = "black";
+      target.style.opacity = "0";
       setTimeout(() => {
-        target.style.backgroundColor = "azure";
+        target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
-      }, 2000);
+      }, 1500);
       break;
     case document.getElementById("button2"):
       appendHero();
-      target.style.backgroundColor = "black";
+      target.style.opacity = "0";
       setTimeout(() => {
-        target.style.backgroundColor = "azure";
+        target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
-      }, 2000);
+      }, 1500);
       break;
     case document.getElementById("button3"):
       appendHero();
-      target.style.backgroundColor = "black";
+      target.style.opacity = "0";
       setTimeout(() => {
-        target.style.backgroundColor = "azure";
+        target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
-      }, 2000);
+      }, 1500);
       break;
     case document.getElementById("button4"):
       appendHero();
-      target.style.backgroundColor = "black";
+      target.style.opacity = "0";
       target.innerHTML = "Randomise Role";
       setTimeout(() => {
-        target.style.backgroundColor = "azure";
+        target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
-      }, 2000);
+      }, 1500);
       break;
     default:
   }
