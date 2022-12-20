@@ -131,7 +131,21 @@ const heroAndRolesAndChallengesAndDrinks = {
   ],
   roles: ["Midlane", "Safelane", "Position 5", "Position 4", "Offlane"],
   challenges: [],
-  drinkAmounts: []
+  drinkAmounts: [
+    "1 sip",
+    "2 sips",
+    "3 sips",
+    "4 sips",
+    "5 sips",
+    "6 sips",
+    "7 sips",
+    "8 sips",
+    "9 sips",
+    "10 sips",
+    "1 shot",
+    "2 shots",
+    "DOWN IT ALL!",
+  ],
 };
 
 // Constructor for player info
@@ -245,7 +259,9 @@ function selectHero() {
 
 // randomly select a role and removes it from the pool
 function selectRole() {
-  const roleSelector = Math.floor(Math.random() * heroAndRolesAndChallengesAndDrinks.roles.length);
+  const roleSelector = Math.floor(
+    Math.random() * heroAndRolesAndChallengesAndDrinks.roles.length
+  );
   const role = heroAndRolesAndChallengesAndDrinks.roles[roleSelector];
   heroAndRolesAndChallengesAndDrinks.roles.splice(roleSelector, 1);
   return role;
