@@ -243,9 +243,10 @@ document.addEventListener("click", (e) => {
   }
 
   switch (target) {
-    case document.getElementById("button0"):
+    case document.getElementById("button0") :
       appendHero();
       target.style.opacity = "0";
+      target.id = 'buttonRole0'
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -254,6 +255,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button1"):
       appendHero();
       target.style.opacity = "0";
+      target.id = 'buttonRole1'
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -262,6 +264,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button2"):
       appendHero();
       target.style.opacity = "0";
+      target.id = 'buttonRole2'
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -270,6 +273,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button3"):
       appendHero();
       target.style.opacity = "0";
+      target.id = 'buttonRole3'
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -278,6 +282,7 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button4"):
       appendHero();
       target.style.opacity = "0";
+      target.id = 'buttonRole4'
       target.innerHTML = "Randomise Role";
       setTimeout(() => {
         target.style.opacity = "1";
