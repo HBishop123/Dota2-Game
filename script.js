@@ -248,11 +248,7 @@ function selectRole() {
   heroAndRoles.roles.splice(roleSelector, 1);
   return role;
 }
-console.log(selectRole());
-console.log(selectRole());
-console.log(selectRole());
-console.log(selectRole());
-console.log(selectRole());
+
 // click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
 document.addEventListener("click", (e) => {
   const target = e.target;
@@ -344,4 +340,16 @@ document.addEventListener("click", (e) => {
     roleText.innerText = `${selectRole()}`;
     parentDiv.appendChild(roleText);
   }
+  switch (target.innerHTML) {
+    case 'Randomise Role':
+      appendRole();
+      target.style.opacity = "0";
+      setTimeout(() => {
+        target.style.opacity = "1";
+        target.innerHTML = "Randomise Challenge";
+      }, 1500);
+      
+      break;
+      default:
+}
 });
