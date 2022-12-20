@@ -234,6 +234,8 @@ document.addEventListener("click", (e) => {
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
     heroText.style.alignSelf = "center";
+    heroText.style.fontSize = '30px'
+    heroText.style.fontWeight = '1000'
     heroText.classList.add("animated");
     
     heroText.innerText = `${selectHero()}`;
