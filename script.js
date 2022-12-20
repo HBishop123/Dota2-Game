@@ -56,6 +56,7 @@ function createPlayerDisplay() {
   for (i = 0; i < playerArray.length; i++) {
     const card = document.createElement("div");
     card.id = `div${i}`;
+    card.classList.add('card')
     card.style.backgroundColor = "blue";
     card.style.height = "250px";
     card.style.width = "500px";
@@ -63,7 +64,7 @@ function createPlayerDisplay() {
     card.style.flexDirection = "column";
     card.style.paddingBottom = "5px";
     card.style.boxShadow = "0px 6px 5px 0px rgba(0, 0, 0, 0.75)";
-    card.style.position = 'relative'
+    card.style.position = "relative";
     playerDisplay.appendChild(card);
 
     const randomButton = document.createElement("button");
@@ -73,10 +74,8 @@ function createPlayerDisplay() {
     randomButton.style.borderRadius = "20px";
     randomButton.style.padding = "5px";
     randomButton.style.border = "4px solid #a72714";
-    randomButton.style.position = 'absolute'
-    randomButton.style.top = '78%'
-    
-    
+    randomButton.style.position = "absolute";
+    randomButton.style.top = "78%";
 
     card.appendChild(randomButton);
 
@@ -234,6 +233,7 @@ document.addEventListener("click", (e) => {
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
     heroText.style.alignSelf = "center";
+    heroText.classList.add("animated");
     heroText.innerText = `${selectHero()}`;
     parentDiv.appendChild(heroText);
   }
