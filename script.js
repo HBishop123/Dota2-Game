@@ -65,6 +65,7 @@ function createPlayerDisplay() {
     card.style.paddingBottom = "5px";
     card.style.boxShadow = "0px 6px 5px 0px rgba(0, 0, 0, 0.75)";
     card.style.position = "relative";
+    card.style.gap = '10px'
     playerDisplay.appendChild(card);
 
     const randomButton = document.createElement("button");
@@ -234,6 +235,7 @@ document.addEventListener("click", (e) => {
     const heroText = document.createElement("p");
     heroText.style.alignSelf = "center";
     heroText.classList.add("animated");
+    
     heroText.innerText = `${selectHero()}`;
     parentDiv.appendChild(heroText);
   }
@@ -243,7 +245,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.backgroundColor = "black";
       setTimeout(() => {
-        target.style.backgroundColor = "white";
+        target.style.backgroundColor = "azure";
         target.innerHTML = "Randomise Role";
       }, 2000);
       break;
@@ -251,7 +253,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.backgroundColor = "black";
       setTimeout(() => {
-        target.style.backgroundColor = "white";
+        target.style.backgroundColor = "azure";
         target.innerHTML = "Randomise Role";
       }, 2000);
       break;
@@ -259,7 +261,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.backgroundColor = "black";
       setTimeout(() => {
-        target.style.backgroundColor = "white";
+        target.style.backgroundColor = "azure";
         target.innerHTML = "Randomise Role";
       }, 2000);
       break;
@@ -267,7 +269,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.backgroundColor = "black";
       setTimeout(() => {
-        target.style.backgroundColor = "white";
+        target.style.backgroundColor = "azure";
         target.innerHTML = "Randomise Role";
       }, 2000);
       break;
@@ -276,7 +278,7 @@ document.addEventListener("click", (e) => {
       target.style.backgroundColor = "black";
       target.innerHTML = "Randomise Role";
       setTimeout(() => {
-        target.style.backgroundColor = "white";
+        target.style.backgroundColor = "azure";
         target.innerHTML = "Randomise Role";
       }, 2000);
       break;
