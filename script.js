@@ -1,6 +1,5 @@
 // array of objects for players
 playerArray = [];
-let idCounter = 0;
 console.log(playerArray);
 
 // Constructor for plsyer info
@@ -234,66 +233,71 @@ function selectHero() {
 
 document.addEventListener("click", (e) => {
   const target = e.target;
+  const card = target.parentNode;
+
   function appendHero() {
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
-    heroText.id = `text${idCounter}`;
     heroText.classList.add("animated");
     heroText.style.alignSelf = "center";
     heroText.style.fontSize = "30px";
     heroText.style.fontWeight = "1000";
 
     heroText.innerText = `${selectHero()}`;
+    heroText.id = heroText.innerText;
     parentDiv.appendChild(heroText);
-    idCounter++;
   }
 
   switch (target) {
     case document.getElementById("button0"):
       appendHero();
       target.style.opacity = "0";
+      playerArray[0].hero = card.querySelector(":nth-child(3)").id;
       target.id = "buttonRole0";
-      playerArray[0].role = document.getElementById("text0").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
       }, 1500);
       break;
+
     case document.getElementById("button1"):
       appendHero();
       target.style.opacity = "0";
+      playerArray[1].hero = card.querySelector(":nth-child(3)").id;
       target.id = "buttonRole1";
-      playerArray[1].role = document.getElementById("text1").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
       }, 1500);
       break;
+
     case document.getElementById("button2"):
       appendHero();
       target.style.opacity = "0";
+      playerArray[2].hero = card.querySelector(":nth-child(3)").id;
       target.id = "buttonRole2";
-      playerArray[2].role = document.getElementById("text2").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
       }, 1500);
       break;
+
     case document.getElementById("button3"):
       appendHero();
       target.style.opacity = "0";
+      playerArray[3].hero = card.querySelector(":nth-child(3)").id;
       target.id = "buttonRole3";
-      playerArray[3].role = document.getElementById("text3").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
       }, 1500);
       break;
+
     case document.getElementById("button4"):
       appendHero();
       target.style.opacity = "0";
       target.id = "buttonRole4";
-      playerArray[4].role = document.getElementById("text4").innerText;
+      playerArray[4].hero = card.querySelector(":nth-child(3)").id;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
