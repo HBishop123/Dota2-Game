@@ -3,7 +3,7 @@ playerArray = [];
 console.log(playerArray);
 
 // object containing the arrays of hero names and roles to choose from
-const heroAndRoles = {
+const heroAndRolesAndChallengesAndDrinks = {
   heroNames: [
     "Abaddon",
     "Alchemist",
@@ -130,9 +130,11 @@ const heroAndRoles = {
     "Zeus",
   ],
   roles: ["Midlane", "Safelane", "Position 5", "Position 4", "Offlane"],
+  challenges: [],
+  drinkAmounts: []
 };
 
-// Constructor for plsyer info
+// Constructor for player info
 class User {
   constructor(playerName, hero, role) {
     this.playerName = playerName;
@@ -234,18 +236,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // randomly chooses a dota2 hero and removes it from the pool until game is completely reset
 function selectHero() {
   const heroSelector = Math.floor(
-    Math.random() * heroAndRoles.heroNames.length
+    Math.random() * heroAndRolesAndChallengesAndDrinks.heroNames.length
   );
-  const hero = heroAndRoles.heroNames[heroSelector];
-  heroAndRoles.heroNames.splice(heroSelector, 1);
+  const hero = heroAndRolesAndChallengesAndDrinks.heroNames[heroSelector];
+  heroAndRolesAndChallengesAndDrinks.heroNames.splice(heroSelector, 1);
   return hero;
 }
 
 // randomly select a role and removes it from the pool
 function selectRole() {
-  const roleSelector = Math.floor(Math.random() * heroAndRoles.roles.length);
-  const role = heroAndRoles.roles[roleSelector];
-  heroAndRoles.roles.splice(roleSelector, 1);
+  const roleSelector = Math.floor(Math.random() * heroAndRolesAndChallengesAndDrinks.roles.length);
+  const role = heroAndRolesAndChallengesAndDrinks.roles[roleSelector];
+  heroAndRolesAndChallengesAndDrinks.roles.splice(roleSelector, 1);
   return role;
 }
 
