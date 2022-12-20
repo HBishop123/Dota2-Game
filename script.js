@@ -1,5 +1,6 @@
 // array of objects for players
 playerArray = [];
+let idCounter = 0;
 console.log(playerArray);
 
 // Constructor for plsyer info
@@ -234,8 +235,6 @@ function selectHero() {
 document.addEventListener("click", (e) => {
   const target = e.target;
   function appendHero() {
-    let idCounter = 0;
-
     const parentDiv = target.parentNode;
     const heroText = document.createElement("p");
     heroText.id = `text${idCounter}`;
@@ -264,6 +263,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.opacity = "0";
       target.id = "buttonRole1";
+      playerArray[1].role = document.getElementById("text1").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -273,6 +273,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.opacity = "0";
       target.id = "buttonRole2";
+      playerArray[2].role = document.getElementById("text2").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -282,6 +283,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.opacity = "0";
       target.id = "buttonRole3";
+      playerArray[3].role = document.getElementById("text3").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -291,7 +293,7 @@ document.addEventListener("click", (e) => {
       appendHero();
       target.style.opacity = "0";
       target.id = "buttonRole4";
-      target.innerHTML = "Randomise Role";
+      playerArray[4].role = document.getElementById("text4").innerText;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
