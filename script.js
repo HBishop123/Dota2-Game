@@ -1,6 +1,6 @@
 // array of objects for players
 playerArray = [];
-console.log(playerArray);
+
 
 // Constructor for plsyer info
 class User {
@@ -52,6 +52,7 @@ const getUserData = () => {
   }
 };
 
+// creates the cards that player info sits on by looping through the playerArray, the card id's scale with [i]
 function createPlayerDisplay() {
   const playerDisplay = document.querySelector("main");
   for (i = 0; i < playerArray.length; i++) {
@@ -69,6 +70,7 @@ function createPlayerDisplay() {
     card.style.gap = "10px";
     playerDisplay.appendChild(card);
 
+    // appends a button to each card, which scales in ID due to the loop [i]
     const randomButton = document.createElement("button");
     randomButton.id = `button${i}`;
     randomButton.classList.add("randomButton");
@@ -80,9 +82,9 @@ function createPlayerDisplay() {
     randomButton.style.position = "absolute";
     randomButton.style.top = "78%";
     randomButton.style.backgroundColor = "azure";
-
     card.appendChild(randomButton);
 
+    // appends the players name to top of the card
     let playerName = document.createElement("p");
     playerName.style.alignSelf = "center";
     playerName.innerHTML = playerArray[i].playerName;
@@ -99,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// randomly chooses a dota2 hero and removes it from the pool until game is completely reset
 function selectHero() {
   const heroNames = [
     "Abaddon",
@@ -231,6 +234,7 @@ function selectHero() {
   return hero;
 }
 
+// click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
 document.addEventListener("click", (e) => {
   const target = e.target;
   const card = target.parentNode;
@@ -307,6 +311,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// click event to append the role to player card
 document.addEventListener("click", (e) => {
   const target = e.target;
   function appendRole() {
