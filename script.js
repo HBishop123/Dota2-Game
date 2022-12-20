@@ -77,6 +77,7 @@ function createPlayerDisplay() {
     randomButton.style.border = "4px solid #a72714";
     randomButton.style.position = "absolute";
     randomButton.style.top = "78%";
+    randomButton.style.backgroundColor = 'azure'
 
     card.appendChild(randomButton);
 
