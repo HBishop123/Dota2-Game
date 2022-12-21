@@ -164,6 +164,7 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Accent man: Pick an accent, it must change each time you die (each failure = the designated amount of drinks for forfeit)",
     "Pet Lover: You must have a neutral creep follow you around, if it dies, you drink the forfeit. If it lives the whole game, give out 3x the reward (helm must be acquired before 20 minutes or you forfeit)",
     "Team Tower Killer: For each tower you deny, you can give out a set of reward drinks. If you dont deny a single tower, you forfeit",
+    "Maximise Suffering: Build your hero in a way that it will annoy the enemies as much as possible - your teammates will decide if you're successful",
   ],
   drinkAmounts: [
     "5 sips",
@@ -244,7 +245,7 @@ function createPlayerDisplay() {
     const card = document.createElement("div");
     card.id = `div${i}`;
     card.classList.add("card");
-    card.style.backgroundColor = "blue";
+    card.style.backgroundColor = "rgb(211,211,211)";
     card.style.minHeight = "250px";
     card.style.width = "500px";
     card.style.display = "flex";
