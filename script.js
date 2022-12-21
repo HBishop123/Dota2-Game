@@ -144,11 +144,11 @@ const heroAndRolesAndChallengesAndDrinks = {
     "After every kill, type 'skill issue' in all chat",
     "After every death, queue a song",
     "Buy smokes every time they're available in the shop",
-    "Place either a Sentry or an Observer on an enemies death location (within half the map range)",
+    "Place either a Sentry or an Observer on an enemies death location (Enemy you killed)",
     "After each deward, quote Family Guy",
     "Lucky or Unlucky?, deny a teammates once",
-    "Lucked out: You can switch roles with a teammate (however, if taken, must drink forfeit)",
-    "Lucked out: you can switch heroes with a teammate (however, if taken, must drink forfeit)",
+    "Lucked out: You can switch roles with a teammate (If taken, must drink forfeit)",
+    "Lucked out: you can switch heroes with a teammate (If taken, must drink forfeit)",
     "Build Dagon 2 as your first 'big' item",
     "Build Atos as your first 'big' item",
     "Build Radiance as your first 'big' item",
@@ -229,10 +229,10 @@ function createPlayerDisplay() {
     card.classList.add("card");
     card.style.backgroundColor = "blue";
     card.style.height = "250px";
-    card.style.width = "500px";
+    card.style.minWidth = "500px";
     card.style.display = "flex";
     card.style.flexDirection = "column";
-    card.style.paddingBottom = "5px";
+    card.style.padding = "0px 5px 5px 5px";
     card.style.boxShadow = "0px 6px 5px 0px rgba(0, 0, 0, 0.75)";
     card.style.position = "relative";
     card.style.gap = "10px";
@@ -292,7 +292,7 @@ function selectRole() {
 // randomly select a challenge, does not remove from pool
 function selectChallenge() {
   const challengeSelector = Math.floor(
-    Math.random() * heroAndRolesAndChallengesAndDrinks.roles.length
+    Math.random() * heroAndRolesAndChallengesAndDrinks.challenges.length
   );
   const challenge =
     heroAndRolesAndChallengesAndDrinks.challenges[challengeSelector];
@@ -379,7 +379,6 @@ document.addEventListener("click", (e) => {
 // click event to append the role to player card
 document.addEventListener("click", (e) => {
   const { target } = e;
-  const card = target.parentNode;
 
   function appendRole() {
     const parentDiv = target.parentNode;
@@ -411,6 +410,31 @@ document.addEventListener("click", (e) => {
       } else if (card.id === "div4") {
         playerArray[4].role = card.querySelector(":nth-child(4)").innerHTML;
       }
+      break;
+    default:
+  }
+});
+
+// click event to append the role to player card
+document.addEventListener("click", (e) => {
+  const { target } = e;
+
+  function appendChallenge() {
+    const parentDiv = target.parentNode;
+    const challengeText = document.createElement("p");
+    challengeText.style.alignSelf = "center";
+    challengeText.style.fontSize = "30px";
+    challengeText.style.fontWeight = "1000";
+    challengeText.classList.add("animated");
+
+    challengeText.innerText = `${selectChallenge()}`;
+    parentDiv.appendChild(challengeText);
+  }
+  switch (target.innerHTML) {
+    case "Randomise Challenge":
+      appendChallenge();
+      target.style.opacity = "0";
+      target.style.display = "none";
       break;
     default:
   }
