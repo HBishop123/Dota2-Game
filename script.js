@@ -164,8 +164,17 @@ const heroAndRolesAndChallengesAndDrinks = {
     "8 sips",
     "9 sips",
     "10 sips",
+    "11 sips",
+    "12 sips",
+    "13 sips",
+    "14 sips",
+    "15 sips",
+    "16 sips",
+    "17 sips",
+    "69 sips",
     "1 shot",
     "2 shots",
+    "3 shots",
     "DOWN IT ALL!",
   ],
 };
@@ -299,6 +308,16 @@ function selectChallenge() {
   return challenge;
 }
 
+// randomly chooses a drink forfeit or reward
+function selectDrinkAmount() {
+  const drinkAmountSelector = Math.floor(
+    Math.random() * heroAndRolesAndChallengesAndDrinks.drinkAmounts.length
+  );
+  const drinkAmount =
+    heroAndRolesAndChallengesAndDrinks.drinkAmounts[drinkAmountSelector];
+  return drinkAmount;
+}
+
 // click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
 document.addEventListener("click", (e) => {
   const { target } = e;
@@ -379,9 +398,9 @@ document.addEventListener("click", (e) => {
 // click event to append the role to player card
 document.addEventListener("click", (e) => {
   const { target } = e;
+  const parentDiv = target.parentNode;
 
   function appendRole() {
-    const parentDiv = target.parentNode;
     const roleText = document.createElement("p");
     roleText.style.alignSelf = "center";
     roleText.style.fontSize = "30px";
@@ -391,6 +410,7 @@ document.addEventListener("click", (e) => {
     roleText.innerText = `${selectRole()}`;
     parentDiv.appendChild(roleText);
   }
+
   switch (target.innerHTML) {
     case "Randomise Role":
       appendRole();
@@ -420,27 +440,48 @@ document.addEventListener("click", (e) => {
 // click event to append the role to player card
 document.addEventListener("click", (e) => {
   const { target } = e;
+  const parentDiv = target.parentNode;
 
   function appendChallenge() {
-    const parentDiv = target.parentNode;
     const challengeText = document.createElement("p");
     challengeText.style.alignSelf = "center";
     challengeText.style.fontSize = "30px";
     challengeText.style.fontWeight = "1000";
-    challengeText.style.alignSelf = 'center'
     challengeText.classList.add("animated");
 
     challengeText.innerText = `${selectChallenge()}`;
     parentDiv.appendChild(challengeText);
   }
+
+  function appendDrinks() {
+    const drinkRewardText = document.createElement("p");
+
+    drinkRewardText.style.alignSelf = "center";
+    drinkRewardText.style.fontSize = "30px";
+    drinkRewardText.style.fontWeight = "1000";
+    drinkRewardText.classList.add("animated");
+    drinkRewardText.innerText = `Reward Amount = ${selectDrinkAmount()}`;
+    parentDiv.appendChild(drinkRewardText);
+
+    const drinkForfeitText = document.createElement("p");
+    drinkForfeitText.style.alignSelf = "center";
+    drinkForfeitText.style.fontSize = "30px";
+    drinkForfeitText.style.fontWeight = "1000";
+    drinkForfeitText.classList.add("animated");
+    drinkForfeitText.innerText = `Forfeit Amount = ${selectDrinkAmount()}`;
+    parentDiv.appendChild(drinkForfeitText);
+  }
+
   switch (target.innerHTML) {
     case "Randomise Challenge":
-      appendChallenge();
+      (() => {
+        appendChallenge();
+        appendDrinks();
+      })();
       target.style.pointerEvents = "none";
       setTimeout(() => {
         target.style.opacity = "0";
         target.style.display = "none";
-        
       }, 1500);
       break;
     default:
