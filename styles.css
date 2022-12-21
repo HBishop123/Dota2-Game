@@ -20,7 +20,6 @@ header {
   padding: 5px, 0px, 5px, 0px;
   justify-items: center;
   align-items: center;
-  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .header-text {
@@ -45,6 +44,8 @@ main {
 
 .form-container {
   position: fixed;
+  align-self: center;
+  justify-self: center;
   width: 350px;
   height: min-content;
   background-color: #d0c7c7;
@@ -126,6 +127,4 @@ p.animated {
 
 .card {
   animation: slideInFromLeft 1s ease-in-out, fadeIn 4s ease-in-out;
-  
 }
-
