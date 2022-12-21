@@ -145,15 +145,15 @@ const heroAndRolesAndChallengesAndDrinks = {
     "After every kill of yours, type 'skill issue' in all chat (each failure = the designated amount of drinks for forfeit)",
     "After every death, queue a song (each failure = the designated amount of drinks for forfeit)",
     "Buy smokes every time they're available in the shop (can only fail once)",
-    "Place either a Sentry or an Observer on an enemies death location, for an enemy you killed (each failure = the designated amount of drinks for forfeit)",
+    "For an enemy you killed place either a Sentry or an Observer on an enemies death location (each failure = the designated amount of drinks for forfeit)",
     "After each deward, quote Family Guy (each failure = the designated amount of drinks for forfeit)",
-    "Lucky or Unlucky?, deny a teammates once",
+    "Lucky or Unlucky?, deny a teammates once. If you succeed, give out 5x the reward amount",
     "Lucked out: You can switch roles with a teammate (If taken, must drink both reward and forfeit combined)",
     "Lucked out: you can switch heroes with a teammate (If taken, must drink both reward and forfeit combined)",
     "Build Dagon 2 as your first 'big' item",
     "Build Atos as your first 'big' item",
     "Build Radiance as your first 'big' item",
-    "Secret Agent: You must smoke into the enemy fountain, and place an item of your choosing (Being detected = failure, you only have once chance)",
+    "Secret Agent: You must smoke into the enemy fountain, and place an item of your choosing in the fountain (Being detected = failure, you only have once chance)",
     "The Arteezy: Cliff an enemy at some point during the game",
     "End the game with over 50 denies",
     "End the game with over 75 denies",
@@ -162,14 +162,10 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Taking Rosh Home: Finish the game with the Aegis in your inventory",
     "Cheese Connoisseur: Finish the game with the Cheese in your inventory",
     "Accent man: Pick an accent, it must change each time you die (each failure = the designated amount of drinks for forfeit)",
-    "Pet Lover: You must have a neutral follow you round, if it dies, you drink the forfeit. If it lives the whole game, give out 3x the reward (helm must be acquired before 20 minutes or you forfeit",
+    "Pet Lover: You must have a neutral creep follow you around, if it dies, you drink the forfeit. If it lives the whole game, give out 3x the reward (helm must be acquired before 20 minutes or you forfeit)",
     "Team Tower Killer: For each tower you deny, you can give out a set of reward drinks. If you dont deny a single tower, you forfeit",
   ],
   drinkAmounts: [
-    "1 sip",
-    "2 sips",
-    "3 sips",
-    "4 sips",
     "5 sips",
     "6 sips",
     "7 sips",
@@ -471,6 +467,7 @@ document.addEventListener("click", (e) => {
     drinkRewardText.style.alignSelf = "center";
     drinkRewardText.style.fontSize = "30px";
     drinkRewardText.style.fontWeight = "1000";
+    drinkRewardText.style.marginTop = "15px";
     drinkRewardText.classList.add("animated");
     drinkRewardText.innerText = `Reward Amount = ${selectDrinkAmount()}`;
     parentDiv.appendChild(drinkRewardText);
