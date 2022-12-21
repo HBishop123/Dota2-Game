@@ -130,7 +130,29 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Zeus",
   ],
   roles: ["Midlane", "Safelane", "Position 5", "Position 4", "Offlane"],
-  challenges: [],
+  challenges: [
+    "Have the highest kill count in the team.",
+    "Have the least amount of deaths in the team",
+    "Have the highest networth in the team",
+    "Achieve 400 last hits",
+    "Achieve 500 last hits",
+    "achieve 600 last hits",
+    "End the game deathless",
+    "After every kill, BM the enemy",
+    "After every death, all chat why it was actually because of a bug",
+    "Have the highest tower damage",
+    "After every kill, type 'skill issue' in all chat",
+    "After every death, queue a song",
+    "Buy smokes every time they're available in the shop",
+    "Place either a Sentry or an Observer on an enemies death location (within half the map range)",
+    "After each deward, quote Family Guy",
+    "Lucky or Unlucky?, deny a teammates once",
+    "Lucked out: You can switch roles with a teammate (however, if taken, must drink forfeit)",
+    "Lucked out: you can switch heroes with a teammate (however, if taken, must drink forfeit)",
+    "Build Dagon 2 as your first 'big' item",
+    "Build Atos as your first 'big' item",
+    "Build Radiance as your first 'big' item",
+  ],
   drinkAmounts: [
     "1 sip",
     "2 sips",
@@ -265,6 +287,16 @@ function selectRole() {
   const role = heroAndRolesAndChallengesAndDrinks.roles[roleSelector];
   heroAndRolesAndChallengesAndDrinks.roles.splice(roleSelector, 1);
   return role;
+}
+
+// randomly select a challenge, does not remove from pool
+function selectChallenge() {
+  const challengeSelector = Math.floor(
+    Math.random() * heroAndRolesAndChallengesAndDrinks.roles.length
+  );
+  const challenge =
+    heroAndRolesAndChallengesAndDrinks.challenges[challengeSelector];
+  return challenge;
 }
 
 // click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
