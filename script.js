@@ -137,6 +137,7 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Achieve 400 last hits",
     "Achieve 500 last hits",
     "Achieve 600 last hits",
+    "Achieve 800 last hits",
     "End the game deathless",
     "After every kill, BM the enemy (each failure = the designated amount of drinks for forfeit)",
     "After every death of yours, all chat why it was actually because of a bug (each failure = the designated amount of drinks for forfeit)",
@@ -152,6 +153,17 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Build Dagon 2 as your first 'big' item",
     "Build Atos as your first 'big' item",
     "Build Radiance as your first 'big' item",
+    "Secret Agent: You must smoke into the enemy fountain, and place an item of your choosing (Being detected = failure, you only have once chance)",
+    "The Arteezy: Cliff an enemy at some point during the game",
+    "End the game with over 50 denies",
+    "End the game with over 75 denies",
+    "End the game with over 100 denies",
+    "Ward a cliff with any neutral creep",
+    "Taking Rosh Home: Finish the game with the Aegis in your inventory",
+    "Cheese Connoisseur: Finish the game with the Cheese in your inventory",
+    "Accent man: Pick an accent, it must change each time you die (each failure = the designated amount of drinks for forfeit)",
+    "Pet Lover: You must have a neutral follow you round, if it dies, you drink the forfeit. If it lives the whole game, give out 3x the reward (helm must be acquired before 20 minutes or you forfeit",
+    "Team Tower Killer: For each tower you deny, you can give out a set of reward drinks. If you dont deny a single tower, you forfeit",
   ],
   drinkAmounts: [
     "1 sip",
@@ -482,7 +494,7 @@ document.addEventListener("click", (e) => {
       setTimeout(() => {
         target.style.opacity = "0";
         target.style.display = "none";
-      }, 1500);
+      }, 1000);
       break;
     default:
   }
