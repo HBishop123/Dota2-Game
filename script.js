@@ -228,8 +228,8 @@ function createPlayerDisplay() {
     card.id = `div${i}`;
     card.classList.add("card");
     card.style.backgroundColor = "blue";
-    card.style.height = "250px";
-    card.style.minWidth = "500px";
+    card.style.minHeight = "250px";
+    card.style.width = "500px";
     card.style.display = "flex";
     card.style.flexDirection = "column";
     card.style.padding = "0px 5px 5px 5px";
