@@ -129,7 +129,7 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Witch Doctor",
     "Zeus",
   ],
-  roles: ["Midlane", "Safelane", "Position 5", "Position 4", "Offlane"],
+  roles: ["Midlane", "Safelane", "Hard Support", "Soft Support", "Offlane"],
   challenges: [
     "Have the highest kill count in the team.",
     "Have the least amount of deaths in the team",
