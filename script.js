@@ -147,7 +147,7 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Buy smokes every time they're available in the shop (can only fail once)",
     "For an enemy you killed place either a Sentry or an Observer on an enemies death location (each failure = the designated amount of drinks for forfeit)",
     "After each deward, quote Family Guy (each failure = the designated amount of drinks for forfeit)",
-    "Lucky or Unlucky?, deny a teammates once. If you succeed, give out 5x the reward amount",
+    "Lucky or Unlucky? Deny a teammates once. If you succeed, give out 5x the reward amount",
     "Lucked out: You can switch roles with a teammate (If taken, must drink both reward and forfeit combined)",
     "Lucked out: you can switch heroes with a teammate (If taken, must drink both reward and forfeit combined)",
     "Build Dagon 2 as your first 'big' item",
