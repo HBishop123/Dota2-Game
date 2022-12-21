@@ -136,7 +136,7 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Have the highest networth in the team",
     "Achieve 400 last hits",
     "Achieve 500 last hits",
-    "achieve 600 last hits",
+    "Achieve 600 last hits",
     "End the game deathless",
     "After every kill, BM the enemy",
     "After every death, all chat why it was actually because of a bug",
@@ -395,9 +395,11 @@ document.addEventListener("click", (e) => {
     case "Randomise Role":
       appendRole();
       target.style.opacity = "0";
+      target.style.pointerEvents = "none";
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Challenge";
+        target.style.pointerEvents = "auto";
       }, 1500);
       if (card.id === "div0") {
         playerArray[0].role = card.querySelector(":nth-child(4)").innerHTML;
@@ -425,6 +427,7 @@ document.addEventListener("click", (e) => {
     challengeText.style.alignSelf = "center";
     challengeText.style.fontSize = "30px";
     challengeText.style.fontWeight = "1000";
+    challengeText.style.alignSelf = 'center'
     challengeText.classList.add("animated");
 
     challengeText.innerText = `${selectChallenge()}`;
@@ -433,8 +436,12 @@ document.addEventListener("click", (e) => {
   switch (target.innerHTML) {
     case "Randomise Challenge":
       appendChallenge();
-      target.style.opacity = "0";
-      target.style.display = "none";
+      target.style.pointerEvents = "none";
+      setTimeout(() => {
+        target.style.opacity = "0";
+        target.style.display = "none";
+        
+      }, 1500);
       break;
     default:
   }
