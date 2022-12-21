@@ -165,6 +165,11 @@ const heroAndRolesAndChallengesAndDrinks = {
     "Pet Lover: You must have a neutral creep follow you around, if it dies, you drink the forfeit. If it lives the whole game, give out 3x the reward (helm must be acquired before 20 minutes or you forfeit)",
     "Team Tower Killer: For each tower you deny, you can give out a set of reward drinks. If you dont deny a single tower, you forfeit",
     "Maximise Suffering: Build your hero in a way that it will annoy the enemies as much as possible - your teammates will decide if you're successful",
+    "Buy a Rapier & keep it all game. Not buying one OR losing it & not retrieving it = forfeit",
+    "GPM must be over 500",
+    "GPM must be over 600",
+    "GPM must be over 700",
+    "GPM must be over 400",
   ],
   drinkAmounts: [
     "5 sips",
@@ -430,16 +435,21 @@ document.addEventListener("click", (e) => {
         target.innerHTML = "Randomise Challenge";
         target.style.pointerEvents = "auto";
       }, 1500);
-      if (card.id === "div0") {
-        playerArray[0].role = card.querySelector(":nth-child(4)").innerHTML;
-      } else if (card.id === "div1") {
-        playerArray[1].role = card.querySelector(":nth-child(4)").innerHTML;
-      } else if (card.id === "div2") {
-        playerArray[2].role = card.querySelector(":nth-child(4)").innerHTML;
-      } else if (card.id === "div3") {
-        playerArray[3].role = card.querySelector(":nth-child(4)").innerHTML;
-      } else if (card.id === "div4") {
-        playerArray[4].role = card.querySelector(":nth-child(4)").innerHTML;
+      if (parentDiv.id === "div0") {
+        playerArray[0].role =
+          parentDiv.querySelector(":nth-child(4)").innerHTML;
+      } else if (parentDiv.id === "div1") {
+        playerArray[1].role =
+          parentDiv.querySelector(":nth-child(4)").innerHTML;
+      } else if (parentDiv.id === "div2") {
+        playerArray[2].role =
+          parentDiv.querySelector(":nth-child(4)").innerHTML;
+      } else if (parentDiv.id === "div3") {
+        playerArray[3].role =
+          parentDiv.querySelector(":nth-child(4)").innerHTML;
+      } else if (parentDiv.id === "div4") {
+        playerArray[4].role =
+          parentDiv.querySelector(":nth-child(4)").innerHTML;
       }
       break;
     default:
