@@ -192,7 +192,7 @@ const heroAndRolesAndChallengesAndDrinks = {
     "DOWN IT ALL!",
   ],
 };
-
+console.log(heroAndRolesAndChallengesAndDrinks.heroNames);
 // Constructor for player info
 class User {
   constructor(playerName, hero, role, challenge, reward, forfeit) {
@@ -370,6 +370,7 @@ document.addEventListener("click", (e) => {
     changeHero.classList.add("animated");
 
     const refresh = document.createElement("img");
+    refresh.id = "spinImage";
     refresh.src = "/logos/refreshL.png";
     changeHero.appendChild(refresh);
 
@@ -580,6 +581,44 @@ document.addEventListener("click", (e) => {
         playerArray[4].forfeit =
           parentDiv.querySelector(":nth-child(7)").innerHTML;
       }
+      break;
+    default:
+  }
+});
+
+// hero re-roll function, removed hero from hero object, returns it to original array and selects a new hero
+document.addEventListener("click", (e) => {
+  const { target } = e;
+  const parentDiv = target.parentNode.parentNode;
+  const heroLocation = parentDiv.querySelector(":nth-child(3) > :nth-child(1)");
+
+  function reRollHero() {
+    setTimeout(() => {
+      heroLocation.innerHTML = "";
+      heroLocation.innerHTML = selectHero();
+      heroLocation.id = heroLocation.innerHTML;
+    }, 1000);
+
+    if (parentDiv.parentNode.id === "div0") {
+      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[0].hero);
+      playerArray[0].hero = heroLocation.id;
+    } else if (parentDiv.parentNode.id === "div1") {
+      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[1].hero);
+      playerArray[1].hero = heroLocation.id;
+    } else if (parentDiv.parentNode.id === "div2") {
+      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[2].hero);
+      playerArray[2].hero = heroLocation.id;
+    } else if (parentDiv.parentNode.id === "div3") {
+      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[3].hero);
+      playerArray[3].hero = heroLocation.id;
+    } else if (parentDiv.parentNode.id === "div4") {
+      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[4].hero);
+      playerArray[4].hero = heroLocation.id;
+    }
+  }
+  switch (target.id) {
+    case "spinImage":
+      reRollHero();
       break;
     default:
   }
