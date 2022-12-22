@@ -252,7 +252,7 @@ function createPlayerDisplay() {
     card.classList.add("card");
     card.style.backgroundColor = "rgb(211,211,211)";
     // card.style.width = "450px";
-    card.style.minHeight = "250px";
+    card.style.minHeight = "300px";
     card.style.display = "flex";
     card.style.flexDirection = "column";
     card.style.padding = "0px 5px 5px 5px";
