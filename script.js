@@ -346,34 +346,41 @@ document.addEventListener("click", (e) => {
 
   function appendHero() {
     const parentDiv = target.parentNode;
+
+    const heroButtonContainer = document.createElement("div");
+    heroButtonContainer.id = "heroButtonContainer";
+    heroButtonContainer.style.display = "flex";
+    heroButtonContainer.style.flexDirection = "row";
+    heroButtonContainer.style.justifyContent = "center";
+    heroButtonContainer.style.gap = "15px";
+
+    parentDiv.appendChild(heroButtonContainer);
+
     const heroText = document.createElement("p");
     heroText.classList.add("animated");
-    heroText.style.alignSelf = "center";
     heroText.style.fontSize = "30px";
     heroText.style.fontWeight = "1000";
-
     heroText.innerText = `${selectHero()}`;
     heroText.id = heroText.innerText;
-    parentDiv.appendChild(heroText);
+    heroButtonContainer.appendChild(heroText);
 
-    const changeHero = document.createElement('button')
+    const changeHero = document.createElement("button");
     changeHero.classList.add("animated");
-    parentDiv.appendChild(changeHero)
-    changeHero.style.position = 'absolute'
-    changeHero.style.bottom = "75%";
-    changeHero.style.left = "80%"
-    changeHero.style.width = "40px"
-    changeHero.style.height = "40px"
-    changeHero.style.borderRadius = "50%"
-    card.style.border = "none"
-   
+
+    changeHero.style.width = "40px";
+    changeHero.style.height = "40px";
+    changeHero.style.borderRadius = "50%";
+    changeHero.style.border = "1px solid black";
+    heroButtonContainer.appendChild(changeHero);
   }
 
   switch (target) {
     case document.getElementById("button0"):
       appendHero();
       target.style.opacity = "0";
-      playerArray[0].hero = card.querySelector(":nth-child(3)").id;
+      playerArray[0].hero = card.querySelector(
+        ":nth-child(3) > :nth-child(1)"
+      ).id;
       target.id = "buttonRole0";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -384,7 +391,9 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button1"):
       appendHero();
       target.style.opacity = "0";
-      playerArray[1].hero = card.querySelector(":nth-child(3)").id;
+      playerArray[1].hero = card.querySelector(
+        ":nth-child(3) > :nth-child(1)"
+      ).id;
       target.id = "buttonRole1";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -395,7 +404,9 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button2"):
       appendHero();
       target.style.opacity = "0";
-      playerArray[2].hero = card.querySelector(":nth-child(3)").id;
+      playerArray[2].hero = card.querySelector(
+        ":nth-child(3) > :nth-child(1)"
+      ).id;
       target.id = "buttonRole2";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -406,7 +417,9 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button3"):
       appendHero();
       target.style.opacity = "0";
-      playerArray[3].hero = card.querySelector(":nth-child(3)").id;
+      playerArray[3].hero = card.querySelector(
+        ":nth-child(3) > :nth-child(1)"
+      ).id;
       target.id = "buttonRole3";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -417,8 +430,10 @@ document.addEventListener("click", (e) => {
     case document.getElementById("button4"):
       appendHero();
       target.style.opacity = "0";
+      playerArray[4].hero = card.querySelector(
+        ":nth-child(3) > :nth-child(1)"
+      ).id;
       target.id = "buttonRole4";
-      playerArray[4].hero = card.querySelector(":nth-child(3)").id;
       setTimeout(() => {
         target.style.opacity = "1";
         target.innerHTML = "Randomise Role";
@@ -547,7 +562,7 @@ document.addEventListener("click", (e) => {
         playerArray[3].challenge =
           parentDiv.querySelector(":nth-child(5)").innerHTML;
         playerArray[3].reward =
-          parentDiv.querySelector(":nth-child(6)").innerHTML;
+          parentDiv.querySelector(":nth-child(7)").innerHTML;
         playerArray[3].forfeit =
           parentDiv.querySelector(":nth-child(7)").innerHTML;
       } else if (parentDiv.id === "div4") {
