@@ -597,7 +597,7 @@ document.addEventListener("click", (e) => {
       heroLocation.innerHTML = "";
       heroLocation.innerHTML = selectHero();
       heroLocation.id = heroLocation.innerHTML;
-    }, 1000);
+    
 
     if (parentDiv.parentNode.id === "div0") {
       heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[0].hero);
@@ -615,6 +615,7 @@ document.addEventListener("click", (e) => {
       heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[4].hero);
       playerArray[4].hero = heroLocation.id;
     }
+  }, 1000);
   }
   switch (target.id) {
     case "spinImage":
