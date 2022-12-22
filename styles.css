@@ -137,23 +137,25 @@ p.animated {
 @media (max-width: 500px) {
   main {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 200px
+    gap: 200px;
+    margin-bottom: 20px;
   }
 
-  .card{
+  .card {
     width: 350px;
   }
 
-  header{
+  header {
     margin-bottom: 50px;
   }
 }
 
-@media (min-width: 500px) and (max-width: 1550px){
+@media (min-width: 500px) and (max-width: 1550px) {
   main {
-    gap: 200px
+    gap: 200px;
+    margin-bottom: 20px;
   }
-  header{
+  header {
     margin-bottom: 50px;
   }
 }
