@@ -371,7 +371,7 @@ document.addEventListener("click", (e) => {
 
     const refresh = document.createElement("img");
     refresh.id = "spinImage";
-    refresh.src = "/logos/refreshL.png";
+    refresh.src = "logos/refreshL.png";
     changeHero.appendChild(refresh);
 
     changeHero.style.width = "40px";
