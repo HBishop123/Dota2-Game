@@ -355,6 +355,18 @@ document.addEventListener("click", (e) => {
     heroText.innerText = `${selectHero()}`;
     heroText.id = heroText.innerText;
     parentDiv.appendChild(heroText);
+
+    const changeHero = document.createElement('button')
+    changeHero.classList.add("animated");
+    parentDiv.appendChild(changeHero)
+    changeHero.style.position = 'absolute'
+    changeHero.style.bottom = "75%";
+    changeHero.style.left = "80%"
+    changeHero.style.width = "40px"
+    changeHero.style.height = "40px"
+    changeHero.style.borderRadius = "50%"
+    card.style.border = "none"
+   
   }
 
   switch (target) {

@@ -127,7 +127,7 @@ button {
   }
 }
 
-p.animated {
+p.animated, button.animated {
   animation: fadeIn 4s ease-in-out;
 }
 
