@@ -195,10 +195,11 @@ const heroAndRolesAndChallengesAndDrinks = {
 
 // Constructor for player info
 class User {
-  constructor(playerName, hero, role) {
+  constructor(playerName, hero, role, challenge) {
     this.playerName = playerName;
     this.hero = hero;
     this.role = role;
+    this.challenge = challenge;
   }
 }
 
@@ -424,7 +425,6 @@ document.addEventListener("click", (e) => {
     roleText.innerText = `${selectRole()}`;
     parentDiv.appendChild(roleText);
   }
-
   switch (target.innerHTML) {
     case "Randomise Role":
       appendRole();
@@ -456,7 +456,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// click event to append the role to player card
+// click event to append the challenge and select the drink amounts to player card
 document.addEventListener("click", (e) => {
   const { target } = e;
   const parentDiv = target.parentNode;
@@ -491,7 +491,7 @@ document.addEventListener("click", (e) => {
     drinkForfeitText.innerText = `Forfeit Amount = ${selectDrinkAmount()}`;
     parentDiv.appendChild(drinkForfeitText);
   }
-
+  // appends the challenges and drink amounts to the card, also pushes the challenge and array of objects
   switch (target.innerHTML) {
     case "Randomise Challenge":
       (() => {
@@ -503,6 +503,22 @@ document.addEventListener("click", (e) => {
         target.style.opacity = "0";
         target.style.display = "none";
       }, 1000);
+      if (parentDiv.id === "div0") {
+        playerArray[0].challenge =
+          parentDiv.querySelector(":nth-child(5)").innerHTML;
+      } else if (parentDiv.id === "div1") {
+        playerArray[1].challenge =
+          parentDiv.querySelector(":nth-child(5)").innerHTML;
+      } else if (parentDiv.id === "div2") {
+        playerArray[2].challenge =
+          parentDiv.querySelector(":nth-child(5)").innerHTML;
+      } else if (parentDiv.id === "div3") {
+        playerArray[3].challenge =
+          parentDiv.querySelector(":nth-child(5)").innerHTML;
+      } else if (parentDiv.id === "div4") {
+        playerArray[4].challenge =
+          parentDiv.querySelector(":nth-child(5)").innerHTML;
+      }
       break;
     default:
   }
