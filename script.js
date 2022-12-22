@@ -340,6 +340,7 @@ function selectDrinkAmount() {
 // RANDOMISE FUNCTIONS END -----------------------------------------------------------------
 
 // click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
+// As well as created a randomise hero button
 document.addEventListener("click", (e) => {
   const { target } = e;
   const card = target.parentNode;
@@ -365,12 +366,18 @@ document.addEventListener("click", (e) => {
     heroButtonContainer.appendChild(heroText);
 
     const changeHero = document.createElement("button");
+    changeHero.id = "changeHero";
     changeHero.classList.add("animated");
+
+    const refresh = document.createElement("img");
+    refresh.src = "/logos/refreshL.png";
+    changeHero.appendChild(refresh);
 
     changeHero.style.width = "40px";
     changeHero.style.height = "40px";
     changeHero.style.borderRadius = "50%";
-    changeHero.style.border = "1px solid black";
+    changeHero.style.border = "none";
+    changeHero.style.backgroundColor = "rgb(211,211,211)";
     heroButtonContainer.appendChild(changeHero);
   }
 
