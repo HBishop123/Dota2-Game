@@ -14,6 +14,7 @@ body {
 
 header {
   min-height: 10vh;
+  width: 100%;
   background-color: #a72714;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -33,11 +34,12 @@ h1 {
 }
 
 main {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   height: 100%;
   width: 100%;
-  padding: 10px 10px 0px 10px;
+  padding-top: 10px;
   align-items: center;
   justify-items: center;
   gap: 30px;
@@ -129,4 +131,29 @@ p.animated {
 
 .card {
   animation: slideInFromLeft 1s ease-in-out, fadeIn 4s ease-in-out;
+  width: 450px;
+}
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 200px
+  }
+
+  .card{
+    width: 350px;
+  }
+
+  header{
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1550px){
+  main {
+    gap: 200px
+  }
+  header{
+    margin-bottom: 50px;
+  }
 }
