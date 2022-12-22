@@ -293,6 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// RANDOMISE FUNCTIONS -----------------------------------------------------------------
+
 // randomly chooses a dota2 hero and removes it from the pool until game is completely reset
 function selectHero() {
   const heroSelector = Math.floor(
@@ -332,6 +334,8 @@ function selectDrinkAmount() {
     heroAndRolesAndChallengesAndDrinks.drinkAmounts[drinkAmountSelector];
   return drinkAmount;
 }
+
+// RANDOMISE FUNCTIONS END -----------------------------------------------------------------
 
 // click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
 document.addEventListener("click", (e) => {
@@ -429,6 +433,7 @@ document.addEventListener("click", (e) => {
     case "Randomise Role":
       appendRole();
       target.style.opacity = "0";
+      // pointer events stops the ability to spam the role button as its fading to become the challenge InnerText (was bug)
       target.style.pointerEvents = "none";
       setTimeout(() => {
         target.style.opacity = "1";
