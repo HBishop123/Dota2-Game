@@ -342,6 +342,7 @@ function selectDrinkAmount() {
 // click event which appends hero choice to the card, pushes that hero choice to the playerArray, and changes the innerHTML of the button to choose role
 // As well as created a randomise hero button
 document.addEventListener("click", (e) => {
+  const heroArr = [];
   const { target } = e;
   const card = target.parentNode;
 
@@ -362,7 +363,7 @@ document.addEventListener("click", (e) => {
     heroText.style.fontSize = "30px";
     heroText.style.fontWeight = "1000";
     heroText.innerText = `${selectHero()}`;
-    heroText.id = heroText.innerText;
+    heroText.id = heroText.innerHTML;
     heroButtonContainer.appendChild(heroText);
 
     const changeHero = document.createElement("button");
@@ -380,15 +381,16 @@ document.addEventListener("click", (e) => {
     changeHero.style.border = "none";
     changeHero.style.backgroundColor = "rgb(211,211,211)";
     heroButtonContainer.appendChild(changeHero);
+    return heroText.innerText;
   }
 
   switch (target) {
     case document.getElementById("button0"):
       appendHero();
-      target.style.opacity = "0";
       playerArray[0].hero = card.querySelector(
         ":nth-child(3) > :nth-child(1)"
       ).id;
+      target.style.opacity = "0";
       target.id = "buttonRole0";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -397,11 +399,9 @@ document.addEventListener("click", (e) => {
       break;
 
     case document.getElementById("button1"):
-      appendHero();
+      heroArr.push(appendHero());
       target.style.opacity = "0";
-      playerArray[1].hero = card.querySelector(
-        ":nth-child(3) > :nth-child(1)"
-      ).id;
+      playerArray[1].hero = heroArr[0]
       target.id = "buttonRole1";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -597,25 +597,24 @@ document.addEventListener("click", (e) => {
       heroLocation.innerHTML = "";
       heroLocation.innerHTML = selectHero();
       heroLocation.id = heroLocation.innerHTML;
-    
 
-    if (parentDiv.parentNode.id === "div0") {
-      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[0].hero);
-      playerArray[0].hero = heroLocation.id;
-    } else if (parentDiv.parentNode.id === "div1") {
-      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[1].hero);
-      playerArray[1].hero = heroLocation.id;
-    } else if (parentDiv.parentNode.id === "div2") {
-      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[2].hero);
-      playerArray[2].hero = heroLocation.id;
-    } else if (parentDiv.parentNode.id === "div3") {
-      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[3].hero);
-      playerArray[3].hero = heroLocation.id;
-    } else if (parentDiv.parentNode.id === "div4") {
-      heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[4].hero);
-      playerArray[4].hero = heroLocation.id;
-    }
-  }, 1000);
+      if (parentDiv.parentNode.id === "div0") {
+        heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[0].hero);
+        playerArray[0].hero = heroLocation.id;
+      } else if (parentDiv.parentNode.id === "div1") {
+        heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[1].hero);
+        playerArray[1].hero = heroLocation.id;
+      } else if (parentDiv.parentNode.id === "div2") {
+        heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[2].hero);
+        playerArray[2].hero = heroLocation.id;
+      } else if (parentDiv.parentNode.id === "div3") {
+        heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[3].hero);
+        playerArray[3].hero = heroLocation.id;
+      } else if (parentDiv.parentNode.id === "div4") {
+        heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[4].hero);
+        playerArray[4].hero = heroLocation.id;
+      }
+    }, 1000);
   }
   switch (target.id) {
     case "spinImage":
