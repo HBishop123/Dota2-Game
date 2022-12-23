@@ -386,10 +386,7 @@ document.addEventListener("click", (e) => {
 
   switch (target) {
     case document.getElementById("button0"):
-      appendHero();
-      playerArray[0].hero = card.querySelector(
-        ":nth-child(3) > :nth-child(1)"
-      ).id;
+      playerArray[0].hero = appendHero();
       target.style.opacity = "0";
       target.id = "buttonRole0";
       setTimeout(() => {
@@ -399,9 +396,8 @@ document.addEventListener("click", (e) => {
       break;
 
     case document.getElementById("button1"):
-      heroArr.push(appendHero());
+      playerArray[1].hero = appendHero();
       target.style.opacity = "0";
-      playerArray[1].hero = heroArr[0]
       target.id = "buttonRole1";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -410,11 +406,8 @@ document.addEventListener("click", (e) => {
       break;
 
     case document.getElementById("button2"):
-      appendHero();
       target.style.opacity = "0";
-      playerArray[2].hero = card.querySelector(
-        ":nth-child(3) > :nth-child(1)"
-      ).id;
+      playerArray[2].hero = appendHero();
       target.id = "buttonRole2";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -423,11 +416,8 @@ document.addEventListener("click", (e) => {
       break;
 
     case document.getElementById("button3"):
-      appendHero();
       target.style.opacity = "0";
-      playerArray[3].hero = card.querySelector(
-        ":nth-child(3) > :nth-child(1)"
-      ).id;
+      playerArray[3].hero = appendHero();
       target.id = "buttonRole3";
       setTimeout(() => {
         target.style.opacity = "1";
@@ -436,11 +426,8 @@ document.addEventListener("click", (e) => {
       break;
 
     case document.getElementById("button4"):
-      appendHero();
       target.style.opacity = "0";
-      playerArray[4].hero = card.querySelector(
-        ":nth-child(3) > :nth-child(1)"
-      ).id;
+      playerArray[4].hero = appendHero();
       target.id = "buttonRole4";
       setTimeout(() => {
         target.style.opacity = "1";
