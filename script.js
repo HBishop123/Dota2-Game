@@ -601,7 +601,7 @@ document.addEventListener("click", (e) => {
         heroAndRolesAndChallengesAndDrinks.heroNames.push(playerArray[4].hero);
         playerArray[4].hero = heroLocation.id;
       }
-    }, 1000);
+    }, 1100);
   }
   switch (target.id) {
     case "spinImage":
